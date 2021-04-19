@@ -1,0 +1,27 @@
+# Python
+*__pycache__
+venv/
+/libspecs/
+.project
+red.xml
+.pydevproject
+# Robotframework
+*log*.html
+*output*.xml
+*report*.html
+*.png
+
+.idea/
+*log*.html
+*output*.xml
+*report*.html
+*reportSIT*.xml
+*reportE2E*.xml
+*.png
+# Robot log
+test_cases/e2e/robotlogs/
+test_cases/web/robot-logs/
+test_cases/api/robotlogs/
+
+
+

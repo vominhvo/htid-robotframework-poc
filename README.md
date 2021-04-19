@@ -15,11 +15,6 @@ It is recommended to use and follow [pep8 style guide](https://www.python.org/de
 
         pip3 install pycodestyle
 
-You can set editor ([e.g. vscode](https://code.visualstudio.com/docs/python/linting)) to use this linter or run it from command line:
-
-        pycodestyle some_file.py
-
-
 If there is some linter warning/error that should be ignored use block comment before error/warning line, e.g.:
 
         # ignored import error
@@ -43,7 +38,7 @@ Need define --> task
 ## Gitlab CI pipeline and RF tags for E2E automation tests
 
 Gitlab CI/CD is used in this project to execute E2E automation tests as scheduled. Test are executed against the latest development branch.
-In [.gitlab-ci.yml](.gitlab-ci.yml) we use now our own docker base image for the CI jobs. If the test environment changes it's needed to build new docker image for CI jobs.
+In [.yml) we use now our own docker base image for the CI jobs. If the test environment changes it's needed to build new docker image for CI jobs.
 
 Gitlab CI pipeline for E2E tests contains multiple jobs/stages. Time limit for each job/stage is 3 hours.
 * Nightly tests:
