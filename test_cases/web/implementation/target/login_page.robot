@@ -1,11 +1,17 @@
-*** Variables ***
+*** Settings ***
 #####################################################################
 # For Login page
 #####################################################################
 
-${LOGIN_DATA_FILE_PATH}    ${EXECDIR}\\test-cases\\web\\test-data\\LoginData.csv
+*** Variables ***
 
-${invalid_email}           @gmail.com
-${valid_password}          123456789
-${blank_email}
-${blank_password}
+${url_prelogin_login}      https://ht-id-spa-demo.herokuapp.com/?sp=Demo+SPA+-+heroku&tenantDomain=carbon.super
+${txt_prelogin_login}      HT ID Demo - Web Client
+${btn_prelogin_login}      xpath=//button[contains(@class,btn-primary)]
+${txt_username_login}      id=usernameUserInput
+${txt_password_login}      id=password
+${btn_dangnhap_login}      xpath=//button[contains(text(),'Đăng nhập')]
+${btn__logout_login}       xpath=//button[contains(text(),'LOGOUT')]
+
+
+

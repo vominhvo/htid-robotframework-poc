@@ -6,22 +6,28 @@ venv/
 red.xml
 .pydevproject
 # Robotframework
-*log*.html
-*output*.xml
-*report*.html
+robotlogs/log.html
+robotlogs/output.xml
+robotlogs/report.html
 *.png
 
 .idea/
-*log*.html
-*output*.xml
-*report*.html
+robotlogs/log.html
+robotlogs/output.xml
+robotlogs/report.html
 *reportSIT*.xml
 *reportE2E*.xml
 *.png
+
 # Robot log
+pabot_results
 test_cases/e2e/robotlogs/
 test_cases/web/robot-logs/
 test_cases/api/robotlogs/
 
+#yaml
+main.py
+.gitlab-ci.yml
+.gitlab-ci.yml.backup
 
 

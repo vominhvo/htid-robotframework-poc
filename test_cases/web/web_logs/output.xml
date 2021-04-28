@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.6 on darwin)" generated="20210427 14:49:16.960" rpa="false">
+<suite id="s1" name="Login Testsuite" source="/Users/hongle/PycharmProjects/hungthinhid-poc/test_cases/web/login_testsuite.robot">
+<test id="s1-t1" name="Scenario: The Login with credentials should be successful">
+<kw name="Given The LogIn page should be opened" library="login_keywords">
+<kw name="I open the pre-Login homepage" library="common_keywords">
+<doc>Opens browser to homepage of HungThinhID and wait until login screen is visible
+Browser and page address can be given as parameter. If empty, presets are used.</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${WEB_BROWSER}' == 'HeadlessChrome'</arg>
+<arg>Open Headless Chrome Browser and go to the webpage</arg>
+<arg>ELSE</arg>
+<arg>Initial webdriver and go to the webpage</arg>
+</arguments>
+<kw name="Initial webdriver and go to the webpage" library="common_keywords">
+<kw name="Set Driver Path For Browser" library="custom_library">
+<msg timestamp="20210427 14:49:17.222" level="INFO">/Users/hongle/venv/bin:/usr/local/opt/python/libexec/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/hongle/Documents/webdrivers:/Library/Apple/usr/bin:/usr/local/opt/python/libexec/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/hongle/PycharmProjects/hungthinhid-poc/test_cases/web/resources/drivers/Mac</msg>
+<status status="PASS" starttime="20210427 14:49:17.216" endtime="20210427 14:49:17.223"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>None</arg>
+</arguments>
+<msg timestamp="20210427 14:49:17.223" level="INFO">Opening browser 'chrome' to base url 'https://ht-id-spa-demo.herokuapp.com'.</msg>
+<status status="PASS" starttime="20210427 14:49:17.223" endtime="20210427 14:49:23.780"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>.5</arg>
+</arguments>
+<status status="PASS" starttime="20210427 14:49:23.780" endtime="20210427 14:49:23.781"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1600</arg>
+<arg>1200</arg>
+</arguments>
+<status status="PASS" starttime="20210427 14:49:23.781" endtime="20210427 14:49:24.395"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210427 14:49:24.396" endtime="20210427 14:49:25.015"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210427 14:49:27.016" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210427 14:49:25.015" endtime="20210427 14:49:27.016"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:17.215" endtime="20210427 14:49:27.016"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:17.215" endtime="20210427 14:49:27.016"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:17.215" endtime="20210427 14:49:27.016"></status>
+</kw>
+<kw name="Click on elemnt" library="common_keywords">
+<doc>Wait until element is visible then click button</doc>
+<arguments>
+<arg>${btn_prelogin_login}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210427 14:49:27.017" endtime="20210427 14:49:28.034"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+</arguments>
+<msg timestamp="20210427 14:49:28.034" level="INFO">Clicking element 'xpath=//button[contains(@class,btn-primary)]'.</msg>
+<status status="PASS" starttime="20210427 14:49:28.034" endtime="20210427 14:49:31.430"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:27.016" endtime="20210427 14:49:31.430"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:17.215" endtime="20210427 14:49:31.430"></status>
+</kw>
+<kw name="When I input Login userName" library="login_keywords">
+<arguments>
+<arg>hongtest3@yopmail.com</arg>
+</arguments>
+<kw name="Set the textbox value" library="common_keywords">
+<doc>Input the value into the textbox</doc>
+<arguments>
+<arg>${txt_username_login}</arg>
+<arg>${p_username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210427 14:49:31.431" endtime="20210427 14:49:32.450"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20210427 14:49:32.451" level="INFO">Typing text 'hongtest3@yopmail.com' into text field 'id=usernameUserInput'.</msg>
+<status status="PASS" starttime="20210427 14:49:32.450" endtime="20210427 14:49:34.066"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:31.431" endtime="20210427 14:49:34.066"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:31.430" endtime="20210427 14:49:34.066"></status>
+</kw>
+<kw name="And I input Login password" library="login_keywords">
+<arguments>
+<arg>Hongtest1@bcxy</arg>
+</arguments>
+<kw name="Set the textbox value" library="common_keywords">
+<doc>Input the value into the textbox</doc>
+<arguments>
+<arg>${txt_password_login}</arg>
+<arg>${p_password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210427 14:49:34.068" endtime="20210427 14:49:35.095"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20210427 14:49:35.096" level="INFO">Typing text 'Hongtest1@bcxy' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20210427 14:49:35.096" endtime="20210427 14:49:36.660"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:34.067" endtime="20210427 14:49:36.660"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:34.067" endtime="20210427 14:49:36.660"></status>
+</kw>
+<kw name="And I click button Dang Nhap" library="login_keywords">
+<kw name="Click on elemnt" library="common_keywords">
+<doc>Wait until element is visible then click button</doc>
+<arguments>
+<arg>${btn_dangnhap_login}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+</arguments>
+<status status="PASS" starttime="20210427 14:49:36.661" endtime="20210427 14:49:37.679"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${p_locator}</arg>
+</arguments>
+<msg timestamp="20210427 14:49:37.679" level="INFO">Clicking element 'xpath=//button[contains(text(),'Đăng nhập')]'.</msg>
+<status status="PASS" starttime="20210427 14:49:37.679" endtime="20210427 14:49:38.731"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:36.661" endtime="20210427 14:49:38.731"></status>
+</kw>
+<status status="PASS" starttime="20210427 14:49:36.661" endtime="20210427 14:49:38.731"></status>
+</kw>
+<kw name="Then Title should be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>${txt_prelogin_login}</arg>
+</arguments>
+<msg timestamp="20210427 14:49:41.114" level="INFO">Page title is 'HT ID Demo - Web Client'.</msg>
+<status status="PASS" starttime="20210427 14:49:38.732" endtime="20210427 14:49:41.114"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210427 14:49:41.115" endtime="20210427 14:49:41.674"></status>
+</kw>
+<doc>As the user, I'd like to login the HungThinhID successfully with my credentails</doc>
+<status status="PASS" starttime="20210427 14:49:17.214" endtime="20210427 14:49:41.674" critical="yes"></status>
+</test>
+<doc>As an user, I'd like to login the application succesfully
+When the login got failure, I'd like to get the meaningfull inform in VN and EN</doc>
+<status status="PASS" starttime="20210427 14:49:16.961" endtime="20210427 14:49:41.675"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Login Testsuite">Login Testsuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

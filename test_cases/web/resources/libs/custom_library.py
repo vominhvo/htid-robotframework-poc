@@ -6,7 +6,7 @@ __all__ = ['set_driver_path_for_browser']
 
 
 ROBOT_LIBRARY_SCOPE = 'TEST SUITE'
-ROBOT_LIBRARY_VERSION = 0.1
+ROBOT_LIBRARY_VERSION = 0.9
 
 
 def set_driver_path_for_browser():
