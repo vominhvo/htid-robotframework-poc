@@ -26,10 +26,9 @@ Initial webdriver and go to the webpage
     [Arguments]  ${browser}=${WEB_BROWSER}  ${url}=${PRELOGIN_PAGE_URL}
     Set driver path for browser
     Open Browser                  ${url}    ${browser}    None
-    Set Selenium Speed            .5
+#    Set Selenium Speed            1
     Set Window Size               1600   1200
     Maximize Browser Window
-    Sleep                         2
 
 Open Headless Chrome Browser and go to the webpage
     Set driver path for browser
@@ -41,13 +40,13 @@ Open Headless Chrome Browser and go to the webpage
     Call Method    ${chrome_options}    add_argument    --no-sandbox
     Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
     Create Webdriver    Chrome    chrome_options=${chrome_options}
-    Set Selenium Speed               .5
+#    Set Selenium Speed             1
     Set Window Size               1600   1200
     Go To    ${PRELOGIN_PAGE_URL}
 #   Wait Until Element Is Visible    ${HOMEPAGE_TITLE}
 #   Capture Page Screenshot
 
-Click on elemnt
+Click on element
     [Documentation]    Wait until element is visible then click button
     [Arguments]                      ${p_locator}
     Wait until element is visible    ${p_locator}

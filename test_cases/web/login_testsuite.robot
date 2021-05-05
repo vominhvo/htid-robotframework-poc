@@ -10,20 +10,22 @@ Resource    implementation/target/login_page.robot
 Test Teardown    Close all browsers
 
 *** Variables ***
-${LOGIN_DATA_FILE_PATH}    ${EXECDIR}\\test-cases\\web\\test-data\\LoginData.csv
+${LOGIN_DATA_FILE_PATH}    ${EXECDIR}\\test_cases\\web\\test_data\\LoginData.csv
 
 
 *** Test Cases ***
 Scenario: The Login with credentials should be successful
     [Documentation]    As the user, I'd like to login the HungThinhID successfully with my credentails
+    [Tags]    Acceptance    Function    SmokeTest
     Given The LogIn page should be opened
     When I input Login userName    hongtest3@yopmail.com
-     And I input Login password    Hongtest2@bcxy
+     And I input Login password    Hongtest3@bcxy
      And I click button Dang Nhap
-    Then Title should be   ${txt_prelogin_login}
+    Then Title should be  ${txt_prelogin_login}
 
 #Scenario: The Login with credentials should be successful with multi-data
 #    [Documentation]    As the user, I'd like to login the HungThinhiD successfully with my credentails
+#    [Tags]    Accepance    Function    SmokeTest
 #    ${login_test_data_list} Read CSV As List ${LOGIN_DATA_FILE_PATH}
 #
 #    FOR ${test_data} IN ${login_test_data_list}

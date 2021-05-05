@@ -8,16 +8,20 @@ Library         SeleniumLibrary
 Library         String
 
 *** Keywords ***
-The Login page is opened
-    I open the HungThinhID homepage
-    I wait until element visible and click button   ${LOGIN_BUTTON_ID}
-    Sleep    2
+The LogIn page should be opened
+    I open the pre-Login homepage
+    Click element   ${btn_prelogin_login}
 
-I login the HungThinhID successfully
-    [Arguments]    ${username_value}    ${password_value}
-    Input text       ${USERNAME_ID}        ${username_value}
-    Input text       ${PASSWORD_ID}        ${password_value}
-    Click element    ${DANGNHAP_BUTTON_ID}
+I input Login Username
+    [Arguments]    ${p_value}
+    Set the textbox value    ${txt_username_login}    ${p_value}
 
-I logout the HungThinhID succesfully
-    I wait until element visible and click button   ${LOGOUT_BUTTON_ID}
+I input Login Password
+    [Arguments]    ${p_value}
+    Set the textbox value    ${txt_password_login}    ${p_value}
+
+I click button Dang Nhap
+    Click on element    ${btn_dangnhap_login}
+
+I click button Logout
+    Click on element    ${btn__logout_login}
